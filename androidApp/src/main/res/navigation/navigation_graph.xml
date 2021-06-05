@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation_graph_main"
+    app:startDestination="@id/userHomeFragment">
+
+    <fragment
+        android:id="@+id/userHomeFragment"
+        android:name="pt.saphirex.sample.android.ui.user.home.UserHomeFragment"
+        android:label="UserHomeFragment">
+
+        <action
+            android:id="@+id/action_userHomeFragment_to_addressManagerFragment"
+            app:destination="@id/addressManagerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addressManagerFragment"
+        android:name="pt.saphirex.sample.android.ui.user.address.AddressManagerFragment"
+        android:label="AddressManagerFragment" />
+
+    <action
+        android:id="@+id/action_global_userHomeFragment"
+        app:destination="@id/userHomeFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/navigation_graph_main"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_addressManagerFragment"
+        app:destination="@id/addressManagerFragment" />
+
+</navigation>
