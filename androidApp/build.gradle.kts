@@ -25,6 +25,12 @@ dependencies {
 }
 
 android {
+    sourceSets {
+        getByName("main") {
+            java.srcDir("build/generated/source/navigation-args")
+        }
+    }
+
     compileSdkVersion(30)
 
     defaultConfig {
